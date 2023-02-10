@@ -1,0 +1,31 @@
+<script>
+    setInterval(function() {
+      var currentTime = new Date();
+      document.querySelector("#title").innerHTML = "My Page - " + currentTime.toLocaleTimeString();
+    }, 1000);
+  </script>
+  <head>
+    <title id="title">My Page</title>
+  </head>
+  
+
+
+
+  
+  <a href="temp.html" id="myLink" target="_blank">Click me</a>
+  <a href="temp.html" id="myLink1" target="_blank">Click me</a>
+
+<script>
+  document.getElementById("myLink").addEventListener("click", function() {
+    setTimeout(function() {
+      document.getElementById("myLink").style.display = "none";
+      document.getElementById("myLink1").style.display = "none";
+    }, 3000);
+  });
+  document.getElementById("myLink1").addEventListener("click", function() {
+    setTimeout(function() {
+      document.getElementById("myLink").style.display = "none";
+      document.getElementById("myLink1").style.display = "none";
+    }, 3000);
+  });
+</script>
